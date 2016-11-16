@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		60AE497D1DDD274C000A59A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AE497C1DDD274C000A59A9 /* main.m */; };
+		60AE49801DDD274C000A59A9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AE497F1DDD274C000A59A9 /* AppDelegate.m */; };
+		60AE49831DDD274C000A59A9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AE49821DDD274C000A59A9 /* ViewController.m */; };
+		60AE49861DDD274C000A59A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60AE49841DDD274C000A59A9 /* Main.storyboard */; };
+		60AE49881DDD274C000A59A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60AE49871DDD274C000A59A9 /* Assets.xcassets */; };
+		60AE498B1DDD274C000A59A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60AE49891DDD274C000A59A9 /* LaunchScreen.storyboard */; };
+		60AE49961DDD274D000A59A9 /* SlotMidtermTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AE49951DDD274D000A59A9 /* SlotMidtermTests.m */; };
+		60AE49A11DDD274D000A59A9 /* SlotMidtermUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AE49A01DDD274D000A59A9 /* SlotMidtermUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		60AE49921DDD274D000A59A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60AE49701DDD274C000A59A9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 60AE49771DDD274C000A59A9;
+			remoteInfo = SlotMidterm;
+		};
+		60AE499D1DDD274D000A59A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60AE49701DDD274C000A59A9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 60AE49771DDD274C000A59A9;
+			remoteInfo = SlotMidterm;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		60AE49781DDD274C000A59A9 /* SlotMidterm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlotMidterm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		60AE497C1DDD274C000A59A9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		60AE497E1DDD274C000A59A9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		60AE497F1DDD274C000A59A9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		60AE49811DDD274C000A59A9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		60AE49821DDD274C000A59A9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		60AE49851DDD274C000A59A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		60AE49871DDD274C000A59A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		60AE498A1DDD274C000A59A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		60AE498C1DDD274C000A59A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60AE49911DDD274D000A59A9 /* SlotMidtermTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlotMidtermTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		60AE49951DDD274D000A59A9 /* SlotMidtermTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlotMidtermTests.m; sourceTree = "<group>"; };
+		60AE49971DDD274D000A59A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60AE499C1DDD274D000A59A9 /* SlotMidtermUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlotMidtermUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		60AE49A01DDD274D000A59A9 /* SlotMidtermUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlotMidtermUITests.m; sourceTree = "<group>"; };
+		60AE49A21DDD274D000A59A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		60AE49751DDD274C000A59A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60AE498E1DDD274D000A59A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60AE49991DDD274D000A59A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		60AE496F1DDD274C000A59A9 = {
+			isa = PBXGroup;
+			children = (
+				60AE497A1DDD274C000A59A9 /* SlotMidterm */,
+				60AE49941DDD274D000A59A9 /* SlotMidtermTests */,
+				60AE499F1DDD274D000A59A9 /* SlotMidtermUITests */,
+				60AE49791DDD274C000A59A9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		60AE49791DDD274C000A59A9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				60AE49781DDD274C000A59A9 /* SlotMidterm.app */,
+				60AE49911DDD274D000A59A9 /* SlotMidtermTests.xctest */,
+				60AE499C1DDD274D000A59A9 /* SlotMidtermUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		60AE497A1DDD274C000A59A9 /* SlotMidterm */ = {
+			isa = PBXGroup;
+			children = (
+				60AE497E1DDD274C000A59A9 /* AppDelegate.h */,
+				60AE497F1DDD274C000A59A9 /* AppDelegate.m */,
+				60AE49811DDD274C000A59A9 /* ViewController.h */,
+				60AE49821DDD274C000A59A9 /* ViewController.m */,
+				60AE49841DDD274C000A59A9 /* Main.storyboard */,
+				60AE49871DDD274C000A59A9 /* Assets.xcassets */,
+				60AE49891DDD274C000A59A9 /* LaunchScreen.storyboard */,
+				60AE498C1DDD274C000A59A9 /* Info.plist */,
+				60AE497B1DDD274C000A59A9 /* Supporting Files */,
+			);
+			path = SlotMidterm;
+			sourceTree = "<group>";
+		};
+		60AE497B1DDD274C000A59A9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				60AE497C1DDD274C000A59A9 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		60AE49941DDD274D000A59A9 /* SlotMidtermTests */ = {
+			isa = PBXGroup;
+			children = (
+				60AE49951DDD274D000A59A9 /* SlotMidtermTests.m */,
+				60AE49971DDD274D000A59A9 /* Info.plist */,
+			);
+			path = SlotMidtermTests;
+			sourceTree = "<group>";
+		};
+		60AE499F1DDD274D000A59A9 /* SlotMidtermUITests */ = {
+			isa = PBXGroup;
+			children = (
+				60AE49A01DDD274D000A59A9 /* SlotMidtermUITests.m */,
+				60AE49A21DDD274D000A59A9 /* Info.plist */,
+			);
+			path = SlotMidtermUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		60AE49771DDD274C000A59A9 /* SlotMidterm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60AE49A51DDD274D000A59A9 /* Build configuration list for PBXNativeTarget "SlotMidterm" */;
+			buildPhases = (
+				60AE49741DDD274C000A59A9 /* Sources */,
+				60AE49751DDD274C000A59A9 /* Frameworks */,
+				60AE49761DDD274C000A59A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SlotMidterm;
+			productName = SlotMidterm;
+			productReference = 60AE49781DDD274C000A59A9 /* SlotMidterm.app */;
+			productType = "com.apple.product-type.application";
+		};
+		60AE49901DDD274D000A59A9 /* SlotMidtermTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60AE49A81DDD274D000A59A9 /* Build configuration list for PBXNativeTarget "SlotMidtermTests" */;
+			buildPhases = (
+				60AE498D1DDD274D000A59A9 /* Sources */,
+				60AE498E1DDD274D000A59A9 /* Frameworks */,
+				60AE498F1DDD274D000A59A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				60AE49931DDD274D000A59A9 /* PBXTargetDependency */,
+			);
+			name = SlotMidtermTests;
+			productName = SlotMidtermTests;
+			productReference = 60AE49911DDD274D000A59A9 /* SlotMidtermTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		60AE499B1DDD274D000A59A9 /* SlotMidtermUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60AE49AB1DDD274D000A59A9 /* Build configuration list for PBXNativeTarget "SlotMidtermUITests" */;
+			buildPhases = (
+				60AE49981DDD274D000A59A9 /* Sources */,
+				60AE49991DDD274D000A59A9 /* Frameworks */,
+				60AE499A1DDD274D000A59A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				60AE499E1DDD274D000A59A9 /* PBXTargetDependency */,
+			);
+			name = SlotMidtermUITests;
+			productName = SlotMidtermUITests;
+			productReference = 60AE499C1DDD274D000A59A9 /* SlotMidtermUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		60AE49701DDD274C000A59A9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "McDonald's Computing INC";
+				TargetAttributes = {
+					60AE49771DDD274C000A59A9 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = J5EEV8595M;
+						ProvisioningStyle = Automatic;
+					};
+					60AE49901DDD274D000A59A9 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = J5EEV8595M;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 60AE49771DDD274C000A59A9;
+					};
+					60AE499B1DDD274D000A59A9 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = J5EEV8595M;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 60AE49771DDD274C000A59A9;
+					};
+				};
+			};
+			buildConfigurationList = 60AE49731DDD274C000A59A9 /* Build configuration list for PBXProject "SlotMidterm" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 60AE496F1DDD274C000A59A9;
+			productRefGroup = 60AE49791DDD274C000A59A9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				60AE49771DDD274C000A59A9 /* SlotMidterm */,
+				60AE49901DDD274D000A59A9 /* SlotMidtermTests */,
+				60AE499B1DDD274D000A59A9 /* SlotMidtermUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		60AE49761DDD274C000A59A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60AE498B1DDD274C000A59A9 /* LaunchScreen.storyboard in Resources */,
+				60AE49881DDD274C000A59A9 /* Assets.xcassets in Resources */,
+				60AE49861DDD274C000A59A9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60AE498F1DDD274D000A59A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60AE499A1DDD274D000A59A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		60AE49741DDD274C000A59A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60AE49831DDD274C000A59A9 /* ViewController.m in Sources */,
+				60AE49801DDD274C000A59A9 /* AppDelegate.m in Sources */,
+				60AE497D1DDD274C000A59A9 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60AE498D1DDD274D000A59A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60AE49961DDD274D000A59A9 /* SlotMidtermTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60AE49981DDD274D000A59A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60AE49A11DDD274D000A59A9 /* SlotMidtermUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		60AE49931DDD274D000A59A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 60AE49771DDD274C000A59A9 /* SlotMidterm */;
+			targetProxy = 60AE49921DDD274D000A59A9 /* PBXContainerItemProxy */;
+		};
+		60AE499E1DDD274D000A59A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 60AE49771DDD274C000A59A9 /* SlotMidterm */;
+			targetProxy = 60AE499D1DDD274D000A59A9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		60AE49841DDD274C000A59A9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				60AE49851DDD274C000A59A9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		60AE49891DDD274C000A59A9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				60AE498A1DDD274C000A59A9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		60AE49A31DDD274D000A59A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		60AE49A41DDD274D000A59A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		60AE49A61DDD274D000A59A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = J5EEV8595M;
+				INFOPLIST_FILE = SlotMidterm/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mcdonald.SlotMidterm;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		60AE49A71DDD274D000A59A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = J5EEV8595M;
+				INFOPLIST_FILE = SlotMidterm/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mcdonald.SlotMidterm;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		60AE49A91DDD274D000A59A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = J5EEV8595M;
+				INFOPLIST_FILE = SlotMidtermTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mcdonald.SlotMidtermTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SlotMidterm.app/SlotMidterm";
+			};
+			name = Debug;
+		};
+		60AE49AA1DDD274D000A59A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = J5EEV8595M;
+				INFOPLIST_FILE = SlotMidtermTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mcdonald.SlotMidtermTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SlotMidterm.app/SlotMidterm";
+			};
+			name = Release;
+		};
+		60AE49AC1DDD274D000A59A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = J5EEV8595M;
+				INFOPLIST_FILE = SlotMidtermUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mcdonald.SlotMidtermUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SlotMidterm;
+			};
+			name = Debug;
+		};
+		60AE49AD1DDD274D000A59A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = J5EEV8595M;
+				INFOPLIST_FILE = SlotMidtermUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mcdonald.SlotMidtermUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SlotMidterm;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		60AE49731DDD274C000A59A9 /* Build configuration list for PBXProject "SlotMidterm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60AE49A31DDD274D000A59A9 /* Debug */,
+				60AE49A41DDD274D000A59A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60AE49A51DDD274D000A59A9 /* Build configuration list for PBXNativeTarget "SlotMidterm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60AE49A61DDD274D000A59A9 /* Debug */,
+				60AE49A71DDD274D000A59A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		60AE49A81DDD274D000A59A9 /* Build configuration list for PBXNativeTarget "SlotMidtermTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60AE49A91DDD274D000A59A9 /* Debug */,
+				60AE49AA1DDD274D000A59A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		60AE49AB1DDD274D000A59A9 /* Build configuration list for PBXNativeTarget "SlotMidtermUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60AE49AC1DDD274D000A59A9 /* Debug */,
+				60AE49AD1DDD274D000A59A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 60AE49701DDD274C000A59A9 /* Project object */;
+}

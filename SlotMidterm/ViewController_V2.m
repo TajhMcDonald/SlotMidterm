@@ -1,49 +1,43 @@
 //
-//  ViewController.m
+//  ViewController_V2.m
 //  SlotMidterm
 //
 //  Created by Tajh McDonald on 11/16/16.
 //  Copyright © 2016 McDonald's Computing INC. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "ViewController_V2.h"
 #import "HistoryViewController.h"
-#import "Digit.h"
-@interface ViewController ()
+@interface ViewController_V2 ()
 
 - (IBAction)spin:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UILabel *currentCoinAmount;
 @property (weak, nonatomic) IBOutlet UILabel *totalCoinWinnings;
-@property (nonatomic, strong) NSMutableArray *digits;
 
 @property (weak, nonatomic) IBOutlet UILabel *notificationOneLabel;
 @property (weak, nonatomic) IBOutlet UILabel *notificationTwoLabel;
+@property (weak, nonatomic) IBOutlet UILabel *detailLabel;
 @property (strong,nonatomic) NSMutableArray *flipHistory;
 
 @property (weak, nonatomic) IBOutlet UIButton *rulesAndRanksButton;
-@property (weak, nonatomic) IBOutlet UILabel *detailLabel;
 
 @property (nonatomic) NSInteger amountOfcoinsWon;
 @property (nonatomic) BOOL justWon;
 @property (nonatomic) BOOL componentOneHeld;
 @property (nonatomic) BOOL componentTwoHeld;
 @property (nonatomic) BOOL componentThreeHeld;
+@property (nonatomic) BOOL componentFourHeld;
+@property (nonatomic) BOOL componentFiveHeld;
+
 @property (nonatomic) NSUInteger rowOne;
 @property (nonatomic) NSUInteger rowTwo;
 @property (nonatomic) NSUInteger rowThree;
-@property (nonatomic) NSUInteger myNumber;
-@property (nonatomic, strong) UIColor *myColor;
 
 @end
 
-@implementation ViewController
-- (NSMutableArray *)digits {
-    if (!_digits) {
-        _digits = [[NSMutableArray alloc] init];
-    }
-    return _digits;
-}
+@implementation ViewController_V2
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -69,64 +63,77 @@
     }
     self.justWon = NO;
 }
-
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
-{
-    return 3;
-}
 -(NSMutableArray*)flipHistory
 {
     if(!_flipHistory)_flipHistory = [[NSMutableArray alloc] init];
     return _flipHistory;
 }
+- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view{
+    CGFloat hue = ( arc4random() % 256 / 256.0 );  //  0.0 to 1.0
+    CGFloat saturation = ( arc4random() % 128 / 256.0 ) + 0.5;  //  0.5 to 1.0, away from white
+    CGFloat brightness = ( arc4random() % 128 / 256.0 ) + 0.5;  //  0.5 to 1.0, away from black
+    UIColor *color = [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:1];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0,0, 44)];
+    label.backgroundColor = [UIColor grayColor];
+    label.textColor = color;
+    label.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:18];
+    label.text = _numbersArray[row];
+    return label;
+}
+
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 5;
+}
+
 - (NSInteger)pickerView:(UIPickerView *)pickerView
 numberOfRowsInComponent:(NSInteger)component
 {
     return self.numbersArray.count;
 }
-- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view{
 
-    UIColor *color;
-    switch (arc4random()%4) {
-        case 0: color = [UIColor redColor]; break;
-        case 1: color = [UIColor blueColor]; break;
-        case 2: color = [UIColor greenColor]; break;
-        case 3: color = [UIColor purpleColor]; break;
-    }
+- (NSString *)pickerView:(UIPickerView *)pickerView
+             titleForRow:(NSInteger)row
+            forComponent:(NSInteger)component
+{
+    return self.numbersArray[row];
+}
 
-    NSString *text;
+- (IBAction)spin:(UIPickerView *)sender
+{
+    [self playerHasCoins];
+}
+
+- (void)playerHasCoins
+{
+    BOOL playerHasCoins = YES;
+ 
     
-    if(component == 0) {
-        text = self.numbersArray[row];
-    } else if(component == 1) {
-        text = self.numbersArray[row];
-    } else if(component ==2){
-        text = self.numbersArray[row];
+    if (playerHasCoins && self.coins >= 2)
+    {
+        self.coins -= 2;
+        self.currentCoinAmount.text = [NSString stringWithFormat:@"Your coins: %li", self.coins];
+        [self spinTheNumbers];
     }
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0,0, 44)];
-    if(view == nil) {
-        label.backgroundColor = [UIColor grayColor];
-        label.textColor = color;
-        label.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:18];
-        label.text = text;
-        
-    }
-    return label;
-
 }
 
 
+- (void)showHiddenNotifcationLabels
+{
+    self.notificationOneLabel.hidden = NO;
+    self.notificationTwoLabel.hidden = NO;
+}
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
     NSMutableAttributedString *textsult=[[NSMutableAttributedString alloc] init];
-
+    
     NSString *resultString = _numbersArray[row];
     [textsult appendAttributedString:[[NSAttributedString alloc]initWithString:resultString ]];
     resultString = _numbersArray[row];
     self.detailLabel.text = resultString;
-    [self addToHistory];
     [self.flipHistory addObject:textsult];
-
+    
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -139,52 +146,11 @@ numberOfRowsInComponent:(NSInteger)component
     }
     
 }
-- (NSAttributedString *)pickerView:(UIPickerView *)pickerView
-             titleForRow:(NSInteger)row
-            forComponent:(NSInteger)component
-{
-    return self.numbersArray[row];
-
-}
-
-- (IBAction)spin:(UIPickerView *)sender
-{
-    
-    [self playerHasEnoughcoins];
-
-}
-
-- (void)playerHasEnoughcoins
-{
-    BOOL playerHasEnoughcoins = YES;
-    
-    if (playerHasEnoughcoins && self.coins >= 2)
-    {
-        self.coins -= 2;
-        self.currentCoinAmount.text = [NSString stringWithFormat:@"Your coins: %li", self.coins];
-        [self spinTheNumbers];
-    }
-        [self showHiddenNotifcationLabels];
-}
-
-
-- (void)showHiddenNotifcationLabels
-{
-    self.notificationOneLabel.hidden = NO;
-    self.notificationTwoLabel.hidden = NO;
-}
-- (NSArray *)gameHistory {
-    if (!_gameHistory) {
-        _gameHistory = [[NSMutableArray alloc] init];
-    }
-    return _gameHistory;
-}
 
 - (void)spinTheNumbers
 {
-    
     self.notificationOneLabel.hidden = YES;
-    self.notificationTwoLabel.hidden = YES; //make this into separate method?
+    self.notificationTwoLabel.hidden = YES;
     
     NSUInteger randomRow = 0;
     NSUInteger amountofCoins = self.numbersArray.count;
@@ -193,48 +159,28 @@ numberOfRowsInComponent:(NSInteger)component
     {
         randomRow = arc4random_uniform((int)amountofCoins);
         [self.CoinPicker selectRow:randomRow inComponent:0 animated:YES];
-
-
     }
     if (!self.componentTwoHeld)
     {
         randomRow = arc4random_uniform((int)amountofCoins);
         [self.CoinPicker selectRow:randomRow inComponent:1 animated:YES];
-
     }
     if (!self.componentThreeHeld)
     {
         randomRow = arc4random_uniform((int)amountofCoins);
         [self.CoinPicker selectRow:randomRow inComponent:2 animated:YES];
-
+    }
+    if (!self.componentFourHeld)
+    {
+        randomRow = arc4random_uniform((int)amountofCoins);
+        [self.CoinPicker selectRow:randomRow inComponent:3 animated:YES];
+    }
+    if (!self.componentFiveHeld)
+    {
+        randomRow = arc4random_uniform((int)amountofCoins);
+        [self.CoinPicker selectRow:randomRow inComponent:4 animated:YES];
     }
     [self postSpinActions];
-    [self addToHistory];
-
-
-}
-- (void)addToHistory {
-    
-    NSMutableString *s = [[NSMutableString alloc] init];
-    for (Digit *d in self.digits) {
-        [s appendString:[NSString stringWithFormat:@"%lu ", d.myNumber]];
-    }
-    
-    UIFont *font = [UIFont fontWithName:@"Courier" size:32.0];
-    
-    NSMutableAttributedString *entry = [[NSMutableAttributedString alloc] initWithString:s];
-    
-    for ( int i = 0 ; i < [self.digits count] ; i++ ) {
-        Digit *d = [self.numbersArray objectAtIndex:i];
-        [entry setAttributes:@{NSForegroundColorAttributeName:d.myColor,
-                               NSFontAttributeName:font}
-                       range:NSMakeRange(i*2, 1)];
-    }
-    
-    [self.flipHistory addObject:entry];
-}
-- (Digit *)getDigit: (int)index {
-    return [self.numbersArray objectAtIndex:index];
 }
 
 - (void)postSpinActions
@@ -243,9 +189,11 @@ numberOfRowsInComponent:(NSInteger)component
     BOOL playerWinsALittle = [self playerHasWonTwoInARow];
     
     NSString *title = @"";
-    NSString *message = @"";
     NSMutableAttributedString *textsult=[[NSMutableAttributedString alloc] init];
-
+    NSString *message = @"";
+    
+    
+    
     if (playerWinsALot)
     {
         NSUInteger winnings = [self playersWinningsWithNumbersInARow:3];
@@ -257,8 +205,6 @@ numberOfRowsInComponent:(NSInteger)component
         [textsult appendAttributedString:[[NSAttributedString alloc]initWithString:title ]];
         self.detailLabel.attributedText = textsult;
         [self.flipHistory addObject:textsult];
-
-
         message = @"Wanna play again?";
     }
     else if (playerWinsALittle)
@@ -272,23 +218,42 @@ numberOfRowsInComponent:(NSInteger)component
         [textsult appendAttributedString:[[NSAttributedString alloc]initWithString:title ]];
         self.detailLabel.attributedText = textsult;
         [self.flipHistory addObject:textsult];
-
         message = @"Wanna play again?";
     }
     else
     {
         self.justWon = NO;
     }
-    self.totalCoinWinnings.text = [NSString stringWithFormat:@"Total coins Won: %li", self.amountOfcoinsWon];
-    self.currentCoinAmount.text = [NSString stringWithFormat:@"Your coins: %li", self.coins];
+    self.totalCoinWinnings.text = [NSString stringWithFormat:@"Total Coins Won: %li", self.amountOfcoinsWon];
+    self.currentCoinAmount.text = [NSString stringWithFormat:@"Your Coins: %li", self.coins];
     
     self.notificationOneLabel.text = title;
     self.notificationTwoLabel.text = message;
     
     [self showHiddenNotifcationLabels];
+    }
 
+- (BOOL)playerHasWonFiveInARow
+{
+    NSUInteger rowOne = [self.CoinPicker selectedRowInComponent:0];
+    NSUInteger rowTwo = [self.CoinPicker selectedRowInComponent:1];
+    NSUInteger rowThree = [self.CoinPicker selectedRowInComponent:2];
+    NSUInteger rowFour = [self.CoinPicker selectedRowInComponent:3];
+    NSUInteger rowFive = [self.CoinPicker selectedRowInComponent:4];
+
+    
+    return (self.numbersArray[rowOne] == self.numbersArray[rowTwo] && self.numbersArray[rowTwo] == self.numbersArray[rowThree] && self.numbersArray[rowThree] == self.numbersArray[rowFour] && self.numbersArray[rowFour] == self.numbersArray[rowFive]);
 }
+- (BOOL)playerHasWonFourInARow
+{
+    NSUInteger rowOne = [self.CoinPicker selectedRowInComponent:0];
+    NSUInteger rowTwo = [self.CoinPicker selectedRowInComponent:1];
+    NSUInteger rowThree = [self.CoinPicker selectedRowInComponent:2];
+    NSUInteger rowFour = [self.CoinPicker selectedRowInComponent:3];
 
+    
+    return (self.numbersArray[rowOne] == self.numbersArray[rowTwo] && self.numbersArray[rowTwo] == self.numbersArray[rowThree] && self.numbersArray[rowThree] == self.numbersArray[rowFour]);
+}
 - (BOOL)playerHasWonThreeInARow
 {
     NSUInteger rowOne = [self.CoinPicker selectedRowInComponent:0];
@@ -297,27 +262,104 @@ numberOfRowsInComponent:(NSInteger)component
     
     return (self.numbersArray[rowOne] == self.numbersArray[rowTwo] && self.numbersArray[rowTwo] == self.numbersArray[rowThree]);
 }
+
 - (BOOL)playerHasWonTwoInARow
 {
-    
     NSUInteger rowOne = [self.CoinPicker selectedRowInComponent:0];
     NSUInteger rowTwo = [self.CoinPicker selectedRowInComponent:1];
     
     return self.numbersArray[rowOne] == self.numbersArray[rowTwo];
 }
 
-- (NSInteger)playersWinningsWithNumbersInARow:(NSUInteger)amountOfcoinsInARow
+- (NSInteger)playersWinningsWithNumbersInARow:(NSUInteger)amountOfNumbersInARow
 {
     NSUInteger rowOne = [self.CoinPicker selectedRowInComponent:0];
     NSUInteger winnings = 0;
-
-    if (amountOfcoinsInARow == 3)
+    if (amountOfNumbersInARow == 5)
     {
         if ([self.numbersArray[rowOne] isEqualToString:@"1"])
         {
+            winnings = 500;
+        }
+        else if ([self.numbersArray[rowOne] isEqualToString:@"2"])
+        {
+            winnings = 1000;
+        }
+        else if ([self.numbersArray[rowOne] isEqualToString:@"3"])
+        {
+            winnings = 2500;
+        }
+        else if ([self.numbersArray[rowOne] isEqualToString:@"4"])
+        {
+            winnings = 5000;
+        }
+        else if ([self.numbersArray[rowOne] isEqualToString:@"5"])
+        {
+            winnings = 7500;
+        }
+        else if ([self.numbersArray[rowOne] isEqualToString:@"6"])
+        {
+            winnings = 10000;
+        }
+        else if ([self.numbersArray[rowOne] isEqualToString:@"7"])
+        {
+            winnings = 15000;
+        }
+        else if ([self.numbersArray[rowOne] isEqualToString:@"8"])
+        {
+            winnings = 50000;
+        }
+        else if ([self.numbersArray[rowOne] isEqualToString:@"9"])
+        {
+            winnings = 100000;
+        }
+    }
 
+    else if (amountOfNumbersInARow == 4)
+    {
+        if ([self.numbersArray[rowOne] isEqualToString:@"1"])
+        {
+            winnings = 25;
+        }
+        else if ([self.numbersArray[rowOne] isEqualToString:@"2"])
+        {
             winnings = 50;
+        }
+        else if ([self.numbersArray[rowOne] isEqualToString:@"3"])
+        {
+            winnings = 150;
+        }
+        else if ([self.numbersArray[rowOne] isEqualToString:@"4"])
+        {
+            winnings = 400;
+        }
+        else if ([self.numbersArray[rowOne] isEqualToString:@"5"])
+        {
+            winnings = 650;
+        }
+        else if ([self.numbersArray[rowOne] isEqualToString:@"6"])
+        {
+            winnings = 900;
+        }
+        else if ([self.numbersArray[rowOne] isEqualToString:@"7"])
+        {
+            winnings = 1000;
+        }
+        else if ([self.numbersArray[rowOne] isEqualToString:@"8"])
+        {
+            winnings = 4000;
+        }
+        else if ([self.numbersArray[rowOne] isEqualToString:@"9"])
+        {
+            winnings = 20000;
+        }
+    }
 
+    else if (amountOfNumbersInARow == 3)
+    {
+        if ([self.numbersArray[rowOne] isEqualToString:@"1"])
+        {
+            winnings = 50;
         }
         else if ([self.numbersArray[rowOne] isEqualToString:@"2"])
         {
@@ -352,7 +394,7 @@ numberOfRowsInComponent:(NSInteger)component
             winnings = 10000;
         }
     }
-    else if (amountOfcoinsInARow == 2)
+    else if (amountOfNumbersInARow == 2)
     {
         if ([self.numbersArray[rowOne] isEqualToString:@"1"])
         {
@@ -394,6 +436,15 @@ numberOfRowsInComponent:(NSInteger)component
     }
     return winnings;
 }
+
+- (void)holdingSlotsError
+{
+    self.notificationOneLabel.text = @"You can't hold slots";
+    self.notificationTwoLabel.text = @"when you've just won.";
+    
+    [self showHiddenNotifcationLabels];
+}
+
 - (IBAction)cashOutButtonTapped:(id)sender
 {
     self.coins = 100;

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6080B9381DF78F43001F3913 /* Digit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6080B9371DF78F43001F3913 /* Digit.m */; };
 		60AE497D1DDD274C000A59A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AE497C1DDD274C000A59A9 /* main.m */; };
 		60AE49801DDD274C000A59A9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AE497F1DDD274C000A59A9 /* AppDelegate.m */; };
 		60AE49831DDD274C000A59A9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AE49821DDD274C000A59A9 /* ViewController.m */; };
@@ -15,6 +16,8 @@
 		60AE498B1DDD274C000A59A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60AE49891DDD274C000A59A9 /* LaunchScreen.storyboard */; };
 		60AE49961DDD274D000A59A9 /* SlotMidtermTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AE49951DDD274D000A59A9 /* SlotMidtermTests.m */; };
 		60AE49A11DDD274D000A59A9 /* SlotMidtermUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AE49A01DDD274D000A59A9 /* SlotMidtermUITests.m */; };
+		60AE49B61DDD2B8E000A59A9 /* ViewController_V2.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AE49B51DDD2B8E000A59A9 /* ViewController_V2.m */; };
+		60AE49B91DDD3933000A59A9 /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AE49B81DDD3933000A59A9 /* HistoryViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6080B9361DF78F35001F3913 /* Digit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Digit.h; sourceTree = "<group>"; };
+		6080B9371DF78F43001F3913 /* Digit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Digit.m; sourceTree = "<group>"; };
 		60AE49781DDD274C000A59A9 /* SlotMidterm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlotMidterm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60AE497C1DDD274C000A59A9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		60AE497E1DDD274C000A59A9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +56,10 @@
 		60AE499C1DDD274D000A59A9 /* SlotMidtermUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlotMidtermUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		60AE49A01DDD274D000A59A9 /* SlotMidtermUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlotMidtermUITests.m; sourceTree = "<group>"; };
 		60AE49A21DDD274D000A59A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60AE49B41DDD2B74000A59A9 /* ViewController_V2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController_V2.h; sourceTree = "<group>"; };
+		60AE49B51DDD2B8E000A59A9 /* ViewController_V2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController_V2.m; sourceTree = "<group>"; };
+		60AE49B71DDD3926000A59A9 /* HistoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
+		60AE49B81DDD3933000A59A9 /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +114,12 @@
 				60AE497F1DDD274C000A59A9 /* AppDelegate.m */,
 				60AE49811DDD274C000A59A9 /* ViewController.h */,
 				60AE49821DDD274C000A59A9 /* ViewController.m */,
+				60AE49B41DDD2B74000A59A9 /* ViewController_V2.h */,
+				60AE49B51DDD2B8E000A59A9 /* ViewController_V2.m */,
+				60AE49B71DDD3926000A59A9 /* HistoryViewController.h */,
+				60AE49B81DDD3933000A59A9 /* HistoryViewController.m */,
+				6080B9361DF78F35001F3913 /* Digit.h */,
+				6080B9371DF78F43001F3913 /* Digit.m */,
 				60AE49841DDD274C000A59A9 /* Main.storyboard */,
 				60AE49871DDD274C000A59A9 /* Assets.xcassets */,
 				60AE49891DDD274C000A59A9 /* LaunchScreen.storyboard */,
@@ -276,8 +291,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60AE49B61DDD2B8E000A59A9 /* ViewController_V2.m in Sources */,
 				60AE49831DDD274C000A59A9 /* ViewController.m in Sources */,
 				60AE49801DDD274C000A59A9 /* AppDelegate.m in Sources */,
+				6080B9381DF78F43001F3913 /* Digit.m in Sources */,
+				60AE49B91DDD3933000A59A9 /* HistoryViewController.m in Sources */,
 				60AE497D1DDD274C000A59A9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -514,6 +532,7 @@
 				60AE49A71DDD274D000A59A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		60AE49A81DDD274D000A59A9 /* Build configuration list for PBXNativeTarget "SlotMidtermTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +541,7 @@
 				60AE49AA1DDD274D000A59A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		60AE49AB1DDD274D000A59A9 /* Build configuration list for PBXNativeTarget "SlotMidtermUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +550,7 @@
 				60AE49AD1DDD274D000A59A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

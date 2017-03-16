@@ -7,9 +7,25 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Digit.h"
 
-@interface ViewController : UIViewController
+@class ViewController;
 
+@protocol ViewControllerDelegate <NSObject>
+
+- (void)ViewController :(ViewController *)viewController didCashOut:(NSInteger)coins;
 
 @end
 
+@interface ViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
+
+@property (strong, nonatomic) IBOutlet UIPickerView *CoinPicker;
+@property (strong, nonatomic) IBOutlet UIButton *spinButton;
+@property (nonatomic, strong) NSMutableArray *gameHistory;
+
+@property (strong, nonatomic) NSArray *numbersArray;
+@property (nonatomic) NSInteger coins;
+
+@property (weak, nonatomic) id<ViewControllerDelegate> delegate;
+
+@end
